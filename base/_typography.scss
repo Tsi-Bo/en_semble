@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+
+/*******************************************************
+  FONTS
+*******************************************************/
+
+@font-face {
+  font-family: "Carelia-Upright";
+  src: url("./Fonts/Carelia-Upright.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./Fonts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./Fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Monserrat-Italic";
+  src: url("./Fonts/Montserrat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("./Fonts/Montserrat-SemiBold.ttf") format("OTF");
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("./Fonts/Satoshi-Regular.otf") format("OTF");
+}
+
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("./Fonts/Satoshi-Bold.otf") format("OTF");
+}
+
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("./Fonts/Satoshi-Medium.otf") format("OTF");
+}
+
+/*******************************************************
+  TYPOGRAPHY
+*******************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Carelia-Upright";
+}
+
+h1 {
+  font-size: var(--fs-xxl);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}
+
+p,
+a {
+  font-family: "Montserrat-Regular";
+  font-size: var(--fs-m);
+}

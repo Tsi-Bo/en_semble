@@ -1,0 +1,42 @@
+.contact {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: var(--space-l) var(--space-xs);
+
+  background-color: #000;
+  color: #fff;
+
+  gap: var(--space-xs);
+  p {
+    line-height: 1.5em;
+  }
+}
+
+.contact__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  width: 100%;
+
+  svg {
+    height: 100%;
+    width: auto;
+  }
+}
+
+/******************************************************* 
+RESPONSIVE
+*******************************************************/
+
+@media (min-width: 801px) {
+  .contact {
+    display: none;
+  }
+}
