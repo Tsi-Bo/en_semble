@@ -1,4 +1,4 @@
-# En_semble
+# En.semble
 ## Explications
 Ce projet fictif à été créé à partir d'un mockup Figma conçu par un designer graphique. 
 
