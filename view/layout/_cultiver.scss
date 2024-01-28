@@ -1,0 +1,147 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/screen";
+
+.section--cultiver {
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-s);
+  }
+  p {
+    margin-bottom: var(--space-s);
+  }
+
+  .cultiver__degrade--rose1,
+  .cultiver__degrade--rose2,
+  .cultiver__degrade--bleu {
+    height: var(--size-xl);
+    width: var(--size-xl);
+    position: absolute;
+    z-index: 10;
+  }
+
+  .cultiver__degrade--rose1 {
+    top: -250px;
+    left: -250px;
+    object-fit: cover;
+  }
+
+  .cultiver__degrade--rose2 {
+    top: 300px;
+    right: -250px;
+    object-fit: cover;
+  }
+
+  .cultiver__degrade--bleu {
+    bottom: -250px;
+    left: -250px;
+    object-fit: cover;
+  }
+}
+
+.cultiver {
+  grid-template-columns: repeat(12, minmax(var(--space-s), var(--grid-col)));
+  grid-template-rows: repeat(14, var(--grid-col));
+
+  &__block--1 {
+    grid-area: 3 / 1 / 5 / 6;
+  }
+
+  &__block--2 {
+    grid-area: 2 / 8 / 7 / 13;
+    position: relative;
+  }
+
+  &__img--1 {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scaleX(-1);
+  }
+
+  &__block--3 {
+    grid-area: 8 / 1 / 15 / 6;
+    justify-self: end;
+    position: relative;
+  }
+
+  &__img--2 {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    transform: scaleX(-1);
+  }
+
+  &__block--4 {
+    grid-area: 8 / 8 / 15/ 13;
+  }
+}
+
+/******************************************************* 
+RESPONSIVE
+*******************************************************/
+
+/* MEDIUM */
+@include screen.m {
+  .cultiver {
+    &__block--1 {
+      grid-area: 3 / 1 / 5 / 7;
+    }
+
+    &__block--2 {
+      grid-area: 2 / 7 / 7 / 13;
+    }
+
+    &__block--3 {
+      grid-area: 8 / 1 / 15 / 7;
+      justify-self: end;
+      position: relative;
+    }
+
+    &__block--4 {
+      grid-area: 8 / 7 / 15/ 13;
+    }
+  }
+}
+
+/* SMALL */
+
+@include screen.s {
+  .cultiver__degrade--rose1 {
+    display: none;
+  }
+
+  .cultiver {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--space-m) var(--space-xs);
+    gap: var(--space-m);
+
+    &__block--1,
+    &__block--2,
+    &__block--3,
+    &__block--4,
+    &__img--1,
+    &__img--2 {
+      width: 100%;
+    }
+
+    &__img--1 {
+      height: var(--size-m);
+      object-fit: cover;
+    }
+    &__img--2 {
+      height: var(--size-xl);
+    }
+  }
+}

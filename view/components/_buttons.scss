@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: var(--space-xs) var(--space-xs);
+  border-radius: 100rem;
+  border: none;
+  width: fit-content;
+
+  font-size: var(--fs-btn);
+
+  transition: all 0.15s;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary);
+  }
+}

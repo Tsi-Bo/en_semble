@@ -1,0 +1,64 @@
+@use "../abstracts/screen";
+.section--collab {
+  color: #fff;
+  background-color: #000;
+}
+
+.collab {
+  // Number of rows
+  grid-template-rows: repeat(10, var(--grid-col));
+
+  &__title {
+    grid-area: 2 / 1 / 3 / 13;
+  }
+
+  &__person--1 {
+    grid-area: 3 / 1 / 11 / 6;
+  }
+  &__person--2 {
+    grid-area: 3 / 8 / 11 / 13;
+  }
+
+  &__img {
+    max-height: var(--size-l);
+    min-height: var(--size-l);
+    height: var(--size-l);
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: var(--space-m);
+  }
+
+  p {
+    margin-bottom: var(--space-s);
+  }
+}
+
+/******************************************************* 
+RESPONSIVE
+*******************************************************/
+
+/* MEDIUM */
+
+@include screen.m {
+  .collab {
+    &__person--1 {
+      grid-area: 3 / 1 / 11 / 7;
+    }
+    &__person--2 {
+      grid-area: 3 / 7 / 11 / 13;
+    }
+  }
+}
+
+/* SMALL */
+
+@include screen.s {
+  .collab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--space-m) var(--space-xs);
+  }
+}

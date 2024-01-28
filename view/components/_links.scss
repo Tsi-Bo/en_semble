@@ -1,0 +1,14 @@
+@use "../base/typography" as *;
+@use "../abstracts/variables" as *;
+
+.link,
+a {
+  font-family: "Montserrat-Regular";
+  font-size: var(--fs-btn);
+  color: #000;
+  transition: all 0.15s;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
